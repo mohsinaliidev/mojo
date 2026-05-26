@@ -31,6 +31,7 @@
 	border: 1px solid #d4d4d4;
 	padding:20px;
 	overflow: hidden;
+	border-radius: 0px 0px 19px 19px;
 }
 .home_content img{
 	vertical-align: middle;
@@ -121,6 +122,131 @@
 	height: 60px;
 }
 
+/* Happy Hour Cards */
+.hh-note{
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	color: #575757;
+	margin-bottom: 16px;
+}
+.hh-note img{
+	flex-shrink: 0;
+	margin-right: 8px;
+}
+.hh-combined{
+	display: flex;
+	border-radius: 19px;
+	overflow: hidden;
+	border: 1px solid #e5e5e5;
+}
+.hh-panel{
+	flex: 1;
+	overflow: hidden;
+	min-width: 0;
+}
+.hh-panel + .hh-panel{
+	border-left: 1px solid #e5e5e5;
+}
+.hh-panel-banner{
+	position: relative;
+	line-height: 0;
+}
+.hh-banner-img{
+	width: 100%;
+	
+	object-fit: cover;
+	display: block;
+}
+.hh-panel-overlay{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 22px;
+	right: 22px;
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+.hh-icon-box{
+	background: #fff;
+	border-radius: 14px;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+.hh-icon-box img{
+	width: 44px;
+	height: 44px;
+	object-fit: contain;
+}
+.hh-icon-box-night{
+	background: rgba(255,255,255,0.18);
+	border: 1.5px solid rgba(255,255,255,0.35);
+	box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+.hh-panel-text h3{
+	color: #1a1a1a;
+	font-size: 28px;
+	font-weight: 800;
+	margin: 0 0 5px 0;
+	line-height: 1.15;
+}
+.hh-panel-text p{
+	color: #666;
+	font-size: 15px;
+	margin: 0;
+}
+.hh-panel-text-dark h3{
+	color: #fff;
+}
+.hh-panel-text-dark p{
+	color: rgba(255,255,255,0.8);
+}
+.hh-pricing{
+	display: flex;
+	align-items: stretch;
+	background: #fff;
+	padding: 28px 16px;
+}
+.hh-price-col{
+	flex: 1;
+	text-align: center;
+	padding: 6px 8px;
+}
+.hh-price-divider{
+	width: 1px;
+	background: #e0e0e0;
+	margin: 6px 0;
+	flex-shrink: 0;
+	align-self: stretch;
+}
+.hh-day-label{
+	color: #888;
+	font-size: 14px;
+	margin: 0 0 12px 0;
+	line-height: 1.4;
+}
+.hh-price{
+	font-size: 56px;
+	font-weight: 800;
+	color: #111;
+	line-height: 1;
+	margin: 0;
+}
+.hh-dollar{
+	font-size: 28px;
+	font-weight: 700;
+	vertical-align: top;
+	margin-top: 10px;
+	display: inline-block;
+	line-height: 1;
+}
+
 /*手机端*/
 @media screen and (max-width:991px){
 	.rd-navbar-fixed .rd-navbar-brand img{
@@ -170,6 +296,52 @@
 	}
 	.mobile_mr{
 		margin: 10px !important;
+	}
+	.hh-combined{
+		flex-direction: column;
+		border-radius: 10px;
+	}
+	.hh-panel + .hh-panel{
+		border-left: none;
+		border-top: 1px solid #e5e5e5;
+	}
+	.hh-banner-img{
+		height: 160px;
+	}
+	.hh-panel-overlay{
+		left: 14px;
+		right: 14px;
+		gap: 12px;
+	}
+	.hh-icon-box{
+		width: 58px;
+		height: 58px;
+	}
+	.hh-icon-box img{
+		width: 30px;
+		height: 30px;
+	}
+	.hh-panel-text h3{
+		font-size: 20px;
+	}
+	.hh-panel-text p{
+		font-size: 13px;
+	}
+	.hh-price{
+		font-size: 42px;
+	}
+	.hh-dollar{
+		font-size: 22px;
+		margin-top: 8px;
+	}
+	.hh-pricing{
+		padding: 18px 8px;
+	}
+	.hh-day-label{
+		font-size: 12px;
+	}
+	.hh-note{
+		font-size: 13px;
 	}
 }
 
